@@ -1,1 +1,201 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head><title>Effects of DRS in Formula One</title>
+     <style>
+            :root{
+                --bg: #f6f8fa;
+                --surface: #ffffff;
+                --text: #0f1724;
+                --muted: #586069;
+                --accent: #0ea5a4;
+                --max-width: 900px;
+                --gap: 20px;
+                --radius: 10px;
+            }
+            
+            *,*:before,*:after{box-sizing:inherit}
+            body { 
+                font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+                margin: 0; 
+                min-height: 100vh;
+                padding: 24px; 
+                background: var(--bg); 
+                color: var(--text); 
+                line-height: 1.6; 
+            }
+            .page { 
+                max-width: var(--max-width); 
+                margin: 0 auto; 
+                padding: 32px;
+                background: var(--surface); 
+                border-radius: var(--radius); 
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 30px rgba(12,18,26,0.06);
+            }
+            h1 { text-align: center; font-size: 1.9rem; margin-top: 6px; margin-bottom: 8px; font-weight:700; }
+            h2 { font-size: 1.15rem; margin: 1.1rem 0 0.5rem; }
+            p { margin: 0.6rem 0; color: #000000; }
+            .center { text-align: center; }
+            .toc { 
+                max-width: 700px; 
+                margin: 0 auto 24px auto; 
+                padding: 16px 20px;
+                background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%);
+                border-radius: 0px;
+                border: 2px solid #000000;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+            .toc strong {
+                display: block;
+                font-size: 1.1rem;
+                color: #000000;
+                margin-bottom: 12px;
+                font-weight: 600;
+            }
+            .toc ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .toc li {
+                margin: 8px 0;
+            }
+            .toc a {
+                color: var(--text);
+                text-decoration: none;
+                transition: all 0.2s ease;
+                padding: 4px 8px;
+                border-radius: 4px;
+                display: inline-block;
+            }
+            .toc a:hover {
+                color: #000000;
+                background: rgba(0, 0, 0, 0.05);
+            }
+            
 
+           
+            .figure{margin:16px 0}
+            .figure img{display:block;width:100%;height:auto;border-radius:8px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+            .figure figcaption{font-size:0.92rem;color:var(--muted);margin-top:8px}
+            .figure--center{max-width:600px;margin-left:auto;margin-right:auto}
+            .figure--right{float:right;width:220px;margin:0 0 12px 20px}
+            .figure--left{float:left;width:220px;margin:0 20px 12px 0}
+            .section-container::after{content:'';display:table;clear:both}
+
+           
+            @media(max-width:720px){
+                .figure--right,.figure--left{float:none;width:100%;margin:12px 0}
+                .page{padding:18px}
+            }
+
+            html{scroll-behavior:smooth}
+            
+            .banner img { width: 100%;}
+           
+                
+            
+        </style>
+    </head>
+    <body>
+    <div class="page">
+        <div class="banner">
+            <img src="banner.png" alt="Formula One DRS Banner" />
+        </div>
+        <h2>ENG0018: Computer Laboratory</h2>
+        <h2>Student URN: 6932942</h2>
+        
+        <br>
+
+        <div class="toc">
+            <strong>Table of Contents</strong>
+        <ul>
+            <li><a href="#Abstract">Abstract</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#How-Wings-Work">DRS Mechanism</a></li>
+             <li><a href="#Why-DRS">Why DRS</a></li>
+            <li><a href="#discussion">Discussion</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#references">References</a></li>
+        </ul>
+    </div>
+    
+    <br>
+    <br>
+
+<h1>Effects of DRS in Formula One</h1>
+<h2 id="Abstract">Abstract</h2>
+<p>The use of DRS has had a significant impact on the technological advancements and racing styles in Formula One. The wings used on F1 cars are essential for generating downforce, however, increases the drag on the car. DRS reduces drag and effects of turbulent air allowing for greater speeds and opportunities for overtaking. While heavily criticised for its simplicity and perceived as an ‘easy speed boost’, it produces a greater number of overtakes and far more entertainment. The FIA has planned for the removal of the DRS system and replacing it for active Aerosystems to encourage greater strategic thinking and energy management.</p>
+
+<br>
+
+<h2 id="introduction">Introduction</h2>
+<p>“Aerodynamics are for people who can’t build engines” – Enzo Ferrari </p>
+
+<p>Aerodynamics plays a vital role in f1 cars today. Without it, cars would not be able to corner at high speeds, accelerate without taking off the ground and provide competitive racing. The FIA (Fédération Internationale de l'Automobile) controls regulations in F1 and encourage the use of aerodynamics as it allows for closer racing and overtaking, Such as the Drag Reduction System which provides a more entertaining race. This paper will investigate the effects of DRS, how it works and the impact it has had on formula one viewers.</p>
+
+<br>
+
+<h2 id="How-Wings-Work">How Wings work</h2>
+<div class="section-container">
+    <figure class="figure figure--right">
+        <img src="activateddrs.png" alt="DRS Activation Diagram" />
+        <figcaption style="text-align:right;">Yang, X. (2025). The Impact of Drag Reduction System Technology on the Performance of Formula One Cars.</figcaption>
+    </figure>
+    <p>F1 cars need to generate downforce to corner at high speeds of up to 190 miles per hour. “Downforce is a vertical aerodynamic force that pushes down on the car, to generate more grip and go faster through corners,” (Emel Cankaya - Why F1 cars have wings – with a McLaren Aero Specialist). This wing is not the same shape as a normal wing on an aeroplane which is used to generate lift. instead, it is an upside-down wing and provides the opposite force of lift – downforce. This phenomenon occurs due to Bernoulli’s Principle - when velocity of a fluid is high, pressure is low. An F1 wing is in the shape of an aerofoil and can create a difference in pressure. ‘When air travels around the upper surface, the velocity of the air slows down as the air must move around the wing while on the lower surface velocity is greater, forming areas of high pressure and low pressure. Due to the difference in pressure between the upper and lower surfaces downforce is generated’ (NASA (2010). Bernoulli’s principle). However, while downforce is essential to corner at high speeds, this also produces a large amount of drag.  </p>
+
+<figure class="figure figure--center">
+    <img src="Rear Wing Pressure.png" alt="Pressure distribution on F1 rear wing" />
+    <figcaption>Zhang, Z. (2023). Study on aerodynamic development in Formula One racing</figcaption>
+</figure>
+
+<br>
+
+<h2 id="Why-DRS">Why DRS</h2>
+<p>Turbulent air is a result of the low pressure generated from the rear wing and the effects the car has on the air which causes disruption. This makes it difficult for drivers behind the leading car to overtake as the airflow is not optimal. ‘When DRS is activated by the press of a button, the rear flap on the wing opens’ (Aston Martin F1 Team). When this occurs, air can pass through the wing and reduces the overall drag on the car as well as turbulent air (dirty air). This is particularly beneficial to the cars behind as turbulent air no longer causes a loss in speed. The DRS is only used in areas on a track where a long straight is present. This is because DRS reduces the downforce and would be dangerous to use around corners and chicanes leading to loss of traction. This is a significant part of the new racing strategies in F1 as it allows for a ‘greater increase in speed by 8 – 12 km/h (5 – 7.5 mph)’ (Aston Martin F1 Team). ‘The drag is reduced by roughly 20% while a multi-element rear wing has shown a reduction in 83% when tested in free-flow conditions where no obstructions occur when driving’ (Zhang, Z. (2023). Study on aerodynamic development in Formula One racing.).</p>
+<figure class="figure figure--center" style="max-width:600px;">
+    <img src="DRS Zones.png" alt="DRS Zones in Singapore Grand Prix" />
+    <figcaption>Formula1.com. (2019). Third DRS zone added for 2019 Singapore Grand Prix</figcaption>
+</figure>
+<br>
+
+<h2 id="discussion">Discussion</h2>
+<p>The DRS has a mixed opinion by viewers as it is seen as an easy speed boost and doesn’t require skill to overtake, reducing the ‘purity’ of the sport. In addition, the leading car is seen to have a disadvantage and an unequal opportunity to keep their position with an increased risk of accidents due to attempted overtakes. However, while the overtakes may be viewed as artificial, there is no doubt more overtakes is far more exciting than none. Furthermore, when DRS is active, turbulent air is no longer a problem which allows the cars to reduce the gap between leading cars for more competitive racing. However, the DRS is undergoing change in the 2026 season, DRS being removed and replaced with Z-mode and X-mode. ‘The FIA aim to reduce the amount of downforce by 30% and reduced drag by 55% to improve efficiency and handling making the cars more raceable. The Z-mode is the standard racing system used to go through corners faster however, the front wing and rear wing will be adjustable. X-mode is a low-drag configuration which angles the flaps of the wing on both the rear and front wing to maximise straight-line speed’ (Formula 1® - The Official F1® Website. (2024). Inside the 2026 aerodynamics regulations). ‘Another new system called the Manual Override Mode (MOM) will work in tandem to Z/X mode by providing greater electrical power, potentially allowing for more ‘organic’ overtaking (Mitchell-Malm, S. (2024). Why F1’s dropping DRS for its 2026 cars). This implements greater strategic thinking and not a simple overtake with the press of a button such as DRS was viewed as.</p>
+<br>
+
+<figure class="figure figure--center" style="max-width:600px;">
+    <img src="DRS Votes.png" alt="DRS Votes results" />
+    <figcaption>Small Survey on DRS: Reed, D. (2022). Should DRS be removed from Formula 1?</figcaption>
+</figure>
+
+<br>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>DRS allows for greater speed, reduced drag and overtaking. DRS has proved essential for the competitiveness of F1 and encourages aggressive racing making it more entertaining. DRS demonstrates that F1 has undergone an evolution in its approach to racing where engines can only do so much and must incorporate aerodynamics for the development of faster cars. While the DRS is criticised for its simplicity and lack of strategic use, it generates several overtakes which is greater than none. The new Z/X mode is yet to be used however the FIA will encourage energy management, providing more organic overtakes. The drivers will be able to alter the wings angle of attacks and opening and closing making the system more complex will mean skill and strategic plays are required.</p>
+<br>
+
+<h2 id="references">References</h2>
+        <ol>
+            <li>Azmi, A., Sapit, A., Mohammed, A. N., Razali, M., Sadikin, A., & Nordin, N. (2017). Study on airflow characteristics of rear wing of F1 car. IOP Conference Series: Materials Science and Engineering, 243, 012030. doi: <a href="https://doi.org/10.1088/1757-899X/243/1/012030">https://doi.org/10.1088/1757-899X/243/1/012030</a>.</li>
+            <li>Aston Martin F1 Team (2023). AVA/Trade explains the F1 rulebook: DRS. Available at: <a href="https://www.astonmartinf1.com/en-GB/news/feature/avatrade-explains-the-f1-rulebook-drs">https://www.astonmartinf1.com/en-GB/news/feature/avatrade-explains-the-f1-rulebook-drs</a>.</li>
+            <li>Autosport (2022). What is DRS in F1, how does it work and is it automatic? Available at: <a href="https://www.autosport.com/f1/news/what-is-drs-f1-how-does-it-work/10307184/">https://www.autosport.com/f1/news/what-is-drs-f1-how-does-it-work/10307184/</a>.</li>
+            <li>Braybrook, R. (2024). Fastest and slowest turns on the F1 calendar. Autosport. Available at: <a href="https://www.autosport.com/f1/news/fastest-and-slowest-turns-on-the-f1-calendar/10571441/">https://www.autosport.com/f1/news/fastest-and-slowest-turns-on-the-f1-calendar/10571441/</a>.</li>
+            <li>Cankaya, E. (2024). Why F1 cars have wings – with a McLaren Aero Specialist. Formula1.com. Available at: <a href="https://www.formula1.com/en/latest/article/f1-explains-downforce-and-why-f1-cars-have-wings-with-mclaren-aero.10xj8CJPz8s7CmwfoyWmCU">https://www.formula1.com/en/latest/article/f1-explains-downforce-and-why-f1-cars-have-wings-with-mclaren-aero.10xj8CJPz8s7CmwfoyWmCU</a>.</li>
+            <li>FORMULA 1 (2024). Aerodynamics in Formula 1 | F1 Explained [YouTube]. Available at: <a href="https://www.youtube.com/watch?v=JuEvK-zCqio">https://www.youtube.com/watch?v=JuEvK-zCqio</a>.</li>
+            <li>Formula1.com (2019). Third DRS zone added for 2019 Singapore Grand Prix. Available at: <a href="https://www.formula1.com/en/latest/article/third-drs-zone-added-for-2019-singapore-grand-prix.4kvO24mLl17DGMeMTRsU4T">https://www.formula1.com/en/latest/article/third-drs-zone-added-for-2019-singapore-grand-prix.4kvO24mLl17DGMeMTRsU4T</a>. [Accessed 22 Oct. 2025].</li>
+            <li>Luke Morgan (2022). Perrinn F1 car rear wing DRS activation - CFD [YouTube]. Available at: <a href="https://www.youtube.com/watch?v=lSrk2pnlx2I">https://www.youtube.com/watch?v=lSrk2pnlx2I</a>.</li>
+            <li>Mitchell-Malm, S. (2024). Why F1’s dropping DRS for its 2026 cars. The Race. Available at: <a href="https://www.the-race.com/formula-1/f1-dropping-drs-2026-cars-explained">https://www.the-race.com/formula-1/f1-dropping-drs-2026-cars-explained</a>. [Accessed 23 Oct. 2025].</li>
+            <li>NASA (2010). Bernoulli’s principle. Available at: <a href="https://www.nasa.gov/wp-content/uploads/2023/06/bernoullis-principle-k-4-02-09-17-508.pdf">https://www.nasa.gov/wp-content/uploads/2023/06/bernoullis-principle-k-4-02-09-17-508.pdf</a>.</li>
+            <li>Pandit, A. & Day, G. (2021). The Aerodynamics of F1 Car Design. Journal of Student Research, 10(2). doi: <a href="https://doi.org/10.47611/jsrhs.v10i2.1475">https://doi.org/10.47611/jsrhs.v10i2.1475</a>.</li>
+             <li>Reed, D. (2022). Should DRS be removed from Formula 1? [online] OverTake.gg. Available at: <a href="https://www.overtake.gg/news/should-drs-be-removed-from-formula-1.547">https://www.overtake.gg/news/should-drs-be-removed-from-formula-1.547</a>. [Accessed 28 Oct. 2025].
+            <li>Yang, X. (2025). The Impact of Drag Reduction System Technology on the Performance of Formula One Cars. Applied and Computational Engineering, 161(1), pp. 3-4. doi: <a href="https://doi.org/10.54254/2755-2721/2025.kl24089">https://doi.org/10.54254/2755-2721/2025.kl24089</a>.</li>
+            <li>Zhang, Z. (2023). Study on aerodynamic development in Formula One racing. Theoretical and Natural Science, 14(1), pp. 38–41. doi: <a href="https://doi.org/10.54254/2753-8818/14/20240875">https://doi.org/10.54254/2753-8818/14/20240875</a>.</li>
+           
+
+‌</li>
+        </ol>
+
+    </div>
+    </body>
+</html>
