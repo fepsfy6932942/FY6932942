@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Effects of DRS in Formula One (Copy)</title>
+  <style>
+    :root{
+      --bg: #f6f8fa;
+      --surface: #ffffff;
+      --text: #0f1724;
+      --muted: #586069;
+      --accent: #0ea5a4;
+      --max-width: 900px;
+      --gap: 20px;
+      --radius: 10px;
+    }
+    *,*:before,*:after{box-sizing:inherit}
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      margin: 0;
+      min-height: 100vh;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 30px rgba(12,18,26,0.06);
+    }
+    h1 { text-align:center; font-size:1.9rem; margin-top:6px; margin-bottom:8px; font-weight:700; }
+    h2 { font-size:1.15rem; margin:1.1rem 0 0.5rem; }
+    p { margin:1.2rem 0; color:#000000; }
+    .toc {
+      max-width:700px;
+      margin:0 auto 24px auto;
+      padding:16px 20px;
+      background:linear-gradient(135deg,#f8fafb 0%,#ffffff 100%);
+      border-radius:0px;
+      border:2px solid #000000;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    .toc strong { display:block; font-size:1.1rem; color:#000000; margin-bottom:12px; font-weight:600; }
+    .toc ul { list-style:none; padding:0; margin:0; }
+    .toc li { margin:8px 0; }
+    .toc a { color:var(--text); text-decoration:none; transition:all .2s ease; padding:4px 8px; border-radius:4px; display:inline-block; }
+    .toc a:hover { color:#000000; background:rgba(0,0,0,0.05); }
+
+    .figure{margin:16px 0}
+    .figure img{display:block;width:100%;height:auto;border-radius:8px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .figure figcaption{font-size:0.92rem;color:var(--muted);margin-top:8px}
+    .figure--center{max-width:600px;margin-left:auto;margin-right:auto}
+    .figure--right{float:right;width:220px;margin:0 0 12px 20px}
+    .figure--left{float:left;width:220px;margin:0 20px 12px 0}
+    .section-container::after{content:'';display:table;clear:both}
+
+    @media(max-width:720px){
+      .figure--right,.figure--left{float:none;width:100%;margin:12px 0}
+      .page{padding:18px}
+    }
+
+    html{scroll-behavior:smooth}
+    .banner img { width: 100%; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="banner">
+      <img src="banner.png" alt="Formula One DRS Banner" />
+    </div>
+
+    <h2>ENG0018: Computer Laboratory</h2>
+    <h2>Student URN: 6932942</h2>
+
+    <div class="toc">
+      <strong>Table of Contents</strong>
+      <ul>
+        <li><a href="#Abstract">Abstract</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#How-Wings-Work">DRS Mechanism</a></li>
+        <li><a href="#Why-DRS">Why DRS</a></li>
+        <li><a href="#discussion">Discussion</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </div>
+
+    <h1>Effects of DRS in Formula One</h1>
+
+    <h2 id="Abstract">Abstract</h2>
+    <p>The use of DRS has had a significant impact on the technological advancements and racing styles in Formula One. The wings used on F1 cars are essential for generating downforce, however, increases [...]</p>
+
+    <h2 id="introduction">Introduction</h2>
+    <p>“Aerodynamics are for people who can’t build engines” – Enzo Ferrari</p>
+    <p>Aerodynamics plays a vital role in f1 cars today. Without it, cars would not be able to corner at high speeds, accelerate without taking off the ground and provide competitive racing. The FIA (Féd[...]</p>
+
+    <h2 id="How-Wings-Work">How Wings work</h2>
+    <div class="section-container">
+      <figure class="figure figure--right">
+        <img src="activateddrs.png" alt="DRS Activation Diagram" />
+        <figcaption style="text-align:right;">Yang, X. (2025). The Impact of Drag Reduction System Technology on the Performance of Formula One Cars.</figcaption>
+      </figure>
+      <p>F1 cars need to generate downforce to corner at high speeds of up to 190 miles per hour. “Downforce is a vertical aerodynamic force that pushes down on the car, to generate more grip and go f[...]</p>
+
+      <figure class="figure figure--center">
+        <img src="Rear Wing Pressure.png" alt="Pressure distribution on F1 rear wing" />
+        <figcaption>Zhang, Z. (2023). Study on aerodynamic development in Formula One racing</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="Why-DRS">Why DRS</h2>
+    <p>Turbulent air is a result of the low pressure generated from the rear wing and the effects the car has on the air which causes disruption. This makes it difficult for drivers behind the leading car[...]</p>
+    <figure class="figure figure--center" style="max-width:600px;">
+      <img src="DRS Zones.png" alt="DRS Zones in Singapore Grand Prix" />
+      <figcaption>Formula1.com. (2019). Third DRS zone added for 2019 Singapore Grand Prix</figcaption>
+    </figure>
+
+    <h2 id="discussion">Discussion</h2>
+    <p>The DRS has a mixed opinion by viewers as it is seen as an easy speed boost and doesn’t require skill to overtake, reducing the ‘purity’ of the sport. In addition, the leading car is seen to [...]</p>
+    <figure class="figure figure--center" style="max-width:600px;">
+      <img src="DRS Votes.png" alt="DRS Votes results" />
+      <figcaption>Small Survey on DRS: Reed, D. (2022). Should DRS be removed from Formula 1?</figcaption>
+    </figure>
+
+    <h2 id="conclusion">Conclusion</h2>
+    <p>DRS allows for greater speed, reduced drag and overtaking. DRS has proved essential for the competitiveness of F1 and encourages aggressive racing making it more entertaining. DRS demonstrates that[...]</p>
+
+    <h2 id="references">References</h2>
+    <ol>
+      <li>Azmi, A., Sapit, A., Mohammed, A. N., Razali, M., Sadikin, A., & Nordin, N. (2017). Study on airflow characteristics of rear wing of F1 car. IOP Conference Series: Materials Science an[...]</li>
+    </ol>
+
+    <!-- Last commit time display -->
+    <div id="last-updated" style="font-size:0.95rem; color:#586069;">Loading last update time...</div>
+
+    <!-- Verify Button -->
+    <button id="verify-button" style="display:block; margin:10px auto; padding:8px 16px;">Verify Last Modified Time</button>
+
+    <!-- Total word count display -->
+    <div id="word-count" style="font-size:0.95rem; color:#586069; text-align:right; margin-top:18px; padding-top:12px; border-top:1px solid rgba(0,0,0,0.05);">Total words: calculating…</div>
+  </div>
+
+  <script>
+    async function getLastUpdatedTime() {
+      const username = 'fepsfy6932942';
+      const repo = 'FY6932942';
+      const url = `https://api.github.com/repos/${encodeURIComponent(username)}/${encodeURIComponent(repo)}/commits?path=index.html&per_page=1`;
+
+      try {
+        const response = await fetch(url, { method: 'GET', headers: { 'Accept': 'application/vnd.github.v3+json' }});
+        if (!response.ok) {
+          document.getElementById('last-updated').innerText = `Error fetching update time: ${response.status} ${response.statusText}`;
+          return false;
+        }
+        const commits = await response.json();
+        if (Array.isArray(commits) && commits.length > 0) {
+          const commit = commits[0].commit || {};
+          const dateString = (commit.committer && commit.committer.date) || (commit.author && commit.author.date);
+          if (!dateString) {
+            document.getElementById('last-updated').innerText = 'No timestamp available for last commit.';
+            return false;
+          }
+          const lastCommitDate = new Date(dateString);
+          const opts = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+          document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString(undefined, opts)}`;
+          return true;
+        } else {
+          document.getElementById('last-updated').innerText = 'No commits found for index.html.';
+          return false;
+        }
+      } catch (err) {
+        console.error('Error fetching last updated time:', err);
+        document.getElementById('last-updated').innerText = 'Error fetching update time. Check console for details.';
+        return false;
+      }
+    }
+
+    document.getElementById('verify-button').addEventListener('click', async function() {
+      const btn = this;
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Verifying...';
+      const ok = await getLastUpdatedTime();
+      if (ok) {
+        btn.textContent = 'Verified ✓';
+      } else {
+        btn.textContent = 'Verify Last Modified Time';
+        alert('Could not verify last modified time. See message near the timestamp or check console.');
+      }
+      setTimeout(() => { btn.disabled = false; btn.textContent = originalText; }, 1600);
+    });
+
+    document.addEventListener('DOMContentLoaded', getLastUpdatedTime);
+  </script>
+
+  <script>
+    (function() {
+      function countWords(text) {
+        if (!text) return 0;
+        const cleaned = text.replace(/\s+/g, ' ').trim();
+        if (cleaned === '') return 0;
+        return cleaned.split(' ').length;
+      }
+
+      function removeSectionUntilNextH2(startHeading) {
+        if (!startHeading) return;
+        let next = startHeading.nextElementSibling;
+        startHeading.remove();
+        while (next && !(next.tagName && next.tagName.toLowerCase() === 'h2')) {
+          const toRemove = next;
+          next = next.nextElementSibling;
+          toRemove.remove();
+        }
+      }
+
+      function updateWordCount() {
+        const el = document.getElementById('word-count');
+        const page = document.querySelector('.page');
+        if (!el || !page) return;
+
+        const clone = page.cloneNode(true);
+        clone.querySelectorAll('script, style, img, figure, .toc, #word-count, #last-updated, button').forEach(n => n.remove());
+
+        const headings = Array.from(clone.querySelectorAll('h2'));
+        for (const h of headings) {
+          const id = (h.getAttribute('id') || '').toLowerCase();
+          const text = (h.textContent || '').toLowerCase();
+          if (id === 'abstract' || text.includes('abstract') ) {
+            removeSectionUntilNextH2(h);
+            break;
+          }
+        }
+        const remainingHeadings = Array.from(clone.querySelectorAll('h2'));
+        for (const h of remainingHeadings) {
+          const id = (h.getAttribute('id') || '').toLowerCase();
+          const text = (h.textContent || '').toLowerCase();
+          if (id === 'references' || text.includes('references')) {
+            removeSectionUntilNextH2(h);
+            break;
+          }
+        }
+
+        const text = clone.innerText || '';
+        const words = countWords(text);
+        el.textContent = 'Total words: ' + words.toLocaleString();
+      }
+
+      document.addEventListener('DOMContentLoaded', updateWordCount);
+      setTimeout(updateWordCount, 300);
+
+      const pageEl = document.querySelector('.page');
+      if (pageEl) {
+        const observer = new MutationObserver(updateWordCount);
+        observer.observe(pageEl, { childList: true, subtree: true, characterData: true });
+      }
+    })();
+  </script>
+</body>
+</html>
