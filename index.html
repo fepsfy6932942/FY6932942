@@ -1,352 +1,279 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Effects of DRS in Formula One</title>
-  <style>
-    :root{
-      --bg: #f6f8fa;
-      --surface: #ffffff;
-      --text: #0f1724;
-      --muted: #586069;
-      --accent: #0ea5a4;
-      --max-width: 900px;
-      --gap: 20px;
-      --radius: 10px;
-    }
-    *,*:before,*:after{box-sizing:inherit}
-    body { 
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
-      margin: 0; 
-      min-height: 100vh;
-      padding: 24px; 
-      background: var(--bg); 
-      color: var(--text); 
-      line-height: 1.6; 
-    }
-    .page { 
-      max-width: var(--max-width); 
-      margin: 0 auto; 
-      padding: 32px;
-      background: var(--surface); 
-      border-radius: var(--radius); 
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 30px rgba(12,18,26,0.06);
-    }
-    h1 { text-align: center; font-size: 1.9rem; margin-top: 6px; margin-bottom: 8px; font-weight:700; }
-    h2 { font-size: 1.15rem; margin: 1.1rem 0 0.5rem; }
-    p { margin: 1.2rem 0; color: #000000; }
-    .center { text-align: center; }
-    .toc { 
-      max-width: 700px; 
-      margin: 0 auto 24px auto; 
-      padding: 16px 20px;
-      background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%);
-      border-radius: 0px;
-      border: 2px solid #000000;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .toc strong {
-      display: block;
-      font-size: 1.1rem;
-      color: #000000;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
-    .toc ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .toc li {
-      margin: 8px 0;
-    }
-    .toc a {
-      color: var(--text);
-      text-decoration: none;
-      transition: all 0.2s ease;
-      padding: 4px 8px;
-      border-radius: 4px;
-      display: inline-block;
-    }
-    .toc a:hover {
-      color: #000000;
-      background: rgba(0, 0, 0, 0.05);
-    }
-    .figure{margin:16px 0}
-    .figure img{display:block;width:100%;height:auto;border-radius:8px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
-    .figure figcaption{font-size:0.92rem;color:var(--muted);margin-top:8px}
-    .figure--center{max-width:600px;margin-left:auto;margin-right:auto}
-    .figure--right{float:right;width:220px;margin:0 0 12px 20px}
-    .figure--left{float:left;width:220px;margin:0 20px 12px 0}
-    .section-container::after{content:'';display:table;clear:both}
-    @media(max-width:720px){
-      .figure--right,.figure--left{float:none;width:100%;margin:12px 0}
-      .page{padding:18px}
-    }
-    html{scroll-behavior:smooth}
-    .banner img { width: 100%;}
-    /* small styling for counts/status */
-    #last-updated { margin-top: 18px; font-size: 0.95rem; color: var(--muted); }
-    #totalWordCount { margin-top: 18px; font-size: 0.95rem; color: var(--muted); }
-    #word-breakdown { margin: 8px 0 0 0; padding-left: 18px; color: var(--muted); }
-    button.verify-btn { display:block; margin: 10px auto; padding: 8px 16px; cursor: pointer; }
-  </style>
-</head>
-<body>
-  <div class="page" role="main">
-    <div class="banner">
-      <img src="banner.png" alt="Formula One DRS Banner" />
-    </div>
-
-    <h2>ENG0018: Computer Laboratory</h2>
-    <h2>Student URN: 6932942</h2>
-
-    <br>
-
-    <div class="toc" aria-label="Table of contents">
-      <strong>Table of Contents</strong>
-      <ul>
-        <li><a href="#Abstract">Abstract</a></li>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#How-Wings-Work">DRS Mechanism</a></li>
-        <li><a href="#Why-DRS">Why DRS</a></li>
-        <li><a href="#discussion">Discussion</a></li>
-        <li><a href="#conclusion">Conclusion</a></li>
-        <li><a href="#references">References</a></li>
-      </ul>
-    </div>
-
-    <br><br>
-
-    <h1>Effects of DRS in Formula One</h1>
-
-    <!-- Wrapped sections in <section data-countable> so the script can count them reliably -->
-    <section id="Abstract" data-countable>
-      <h2>Abstract</h2>
-      <p>The use of DRS has had a significant impact on the technological advancements and racing styles in Formula One. The wings used on F1 cars are essential for generating downforce, however, increases the drag on the car. DRS reduces drag and effects of turbulent air allowing for greater speeds and opportunities for overtaking. While heavily criticised for its simplicity and perceived as an ‘easy speed boost’, it produces a greater number of overtakes and far more entertainment. The FIA has planned for the removal of the DRS system and replacing it for active Aerosystems to encourage greater strategic thinking and energy management.</p>
-    </section>
-
-    <br>
-
-    <section id="introduction" data-countable>
-      <h2>Introduction</h2>
-      <p>“Aerodynamics are for people who can’t build engines” – Enzo Ferrari</p>
-      <p>Aerodynamics plays a vital role in f1 cars today. Without it, cars would not be able to corner at high speeds, accelerate without taking off the ground and provide competitive racing. The FIA (Fédération Internationale de l'Automobile) controls regulations in F1 and encourage the use of aerodynamics as it allows for closer racing and overtaking, Such as the Drag Reduction System which provides a more entertaining race. This paper will investigate the effects of DRS, how it works and the impact it has had on formula one viewers.</p>
-    </section>
-
-    <br>
-
-    <section id="How-Wings-Work" data-countable>
-      <h2>How Wings work</h2>
-      <div class="section-container">
-        <figure class="figure figure--right">
-          <img src="activateddrs.png" alt="DRS Activation Diagram" />
-          <figcaption style="text-align:right;">Yang, X. (2025). The Impact of Drag Reduction System Technology on the Performance of Formula One Cars.</figcaption>
-        </figure>
-        <p>F1 cars need to generate downforce to corner at high speeds of up to 190 miles per hour. “Downforce is a vertical aerodynamic force that pushes down on the car, to generate more grip and go faster through corners,” (Emel Cankaya - Why F1 cars have wings – with a McLaren Aero Specialist). This wing is not the same shape as a normal wing on an aeroplane which is used to generate lift. instead, it is an upside-down wing and provides the opposite force of lift – downforce. This phenomenon occurs due to Bernoulli’s Principle - when velocity of a fluid is high, pressure is low. An F1 wing is in the shape of an aerofoil and can create a difference in pressure. ‘When air travels around the upper surface, the velocity of the air slows down as the air must move around the wing while on the lower surface velocity is greater, forming areas of high pressure and low pressure. Due to the difference in pressure between the upper and lower surfaces downforce is generated’ (NASA (2010). Bernoulli’s principle). However, while downforce is essential to corner at high speeds, this also produces a large amount of drag.</p>
-
-        <figure class="figure figure--center">
-          <img src="Rear Wing Pressure.png" alt="Pressure distribution on F1 rear wing" />
-          <figcaption>Zhang, Z. (2023). Study on aerodynamic development in Formula One racing</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <br>
-
-    <section id="Why-DRS" data-countable>
-      <h2>Why DRS</h2>
-      <p>Turbulent air is a result of the low pressure generated from the rear wing and the effects the car has on the air which causes disruption. This makes it difficult for drivers behind the leading car to overtake as the airflow is not optimal. ‘When DRS is activated by the press of a button, the rear flap on the wing opens’ (Aston Martin F1 Team). When this occurs, air can pass through the wing and reduces the overall drag on the car as well as turbulent air (dirty air). This is particularly beneficial to the cars behind as turbulent air no longer causes a loss in speed. The DRS is only used in areas on a track where a long straight is present. This is because DRS reduces the downforce and would be dangerous to use around corners and chicanes leading to loss of traction. This is a significant part of the new racing strategies in F1 as it allows for a ‘greater increase in speed by 8 – 12 km/h (5 – 7.5 mph)’ (Aston Martin F1 Team). ‘The drag is reduced by roughly 20% while a multi-element rear wing has shown a reduction in 83% when tested in free-flow conditions where no obstructions occur when driving’ (Zhang, Z. (2023). Study on aerodynamic development in Formula One racing.).</p>
-
-      <figure class="figure figure--center" style="max-width:600px;">
-        <img src="DRS Zones.png" alt="DRS Zones in Singapore Grand Prix" />
-        <figcaption>Formula1.com. (2019). Third DRS zone added for 2019 Singapore Grand Prix</figcaption>
-      </figure>
-    </section>
-
-    <br>
-
-    <section id="discussion" data-countable>
-      <h2>Discussion</h2>
-      <p>The DRS has a mixed opinion by viewers as it is seen as an easy speed boost and doesn’t require skill to overtake, reducing the ‘purity’ of the sport. In addition, the leading car is seen to have a disadvantage and an unequal opportunity to keep their position with an increased risk of accidents due to attempted overtakes. However, while the overtakes may be viewed as artificial, there is no doubt more overtakes is far more exciting than none. Furthermore, when DRS is active, turbulent air is no longer a problem which allows the cars to reduce the gap between leading cars for more competitive racing. However, the DRS is undergoing change in the 2026 season, DRS being removed and replaced with Z-mode and X-mode. ‘The FIA aim to reduce the amount of downforce by 30% and reduced drag by 55% to improve efficiency and handling making the cars more raceable. The Z-mode is the standard racing system used to go through corners faster however, the front wing and rear wing will be adjustable. X-mode is a low-drag configuration which angles the flaps of the wing on both the rear and front wing to maximise straight-line speed’ (Formula 1® - The Official F1® Website. (2024). Inside the 2026 aerodynamics regulations). ‘Another new system called the Manual Override Mode (MOM) will work in tandem to Z/X mode by providing greater electrical power, potentially allowing for more ‘organic’ overtaking (Mitchell-Malm, S. (2024). Why F1’s dropping DRS for its 2026 cars). This implements greater strategic thinking and not a simple overtake with the press of a button such as DRS was viewed as.</p>
-
-      <br>
-      <figure class="figure figure--center" style="max-width:600px;">
-        <img src="DRS Votes.png" alt="DRS Votes results" />
-        <figcaption>Small Survey on DRS: Reed, D. (2022). Should DRS be removed from Formula 1?</figcaption>
-      </figure>
-    </section>
-
-    <br>
-
-    <section id="conclusion" data-countable>
-      <h2>Conclusion</h2>
-      <p>DRS allows for greater speed, reduced drag and overtaking. DRS has proved essential for the competitiveness of F1 and encourages aggressive racing making it more entertaining. DRS demonstrates that F1 has undergone an evolution in its approach to racing where engines can only do so much and must incorporate aerodynamics for the development of faster cars. While the DRS is criticised for its simplicity and lack of strategic use, it generates several overtakes which is greater than none. The new Z/X mode is yet to be used however the FIA will encourage energy management, providing more organic overtakes. The drivers will be able to alter the wings angle of attacks and opening and closing making the system more complex will mean skill and strategic plays are required.</p>
-    </section>
-
-    <br>
-
-    <section id="references" data-countable>
-      <h2>References</h2>
-      <ol>
-        <li>Azmi, A., Sapit, A., Mohammed, A. N., Razali, M., Sadikin, A., & Nordin, N. (2017). Study on airflow characteristics of rear wing of F1 car. IOP Conference Series: Materials Science and Engineering, 243, 012030. doi: <a href="https://doi.org/10.1088/1757-899X/243/1/012030">https://doi.org/10.1088/1757-899X/243/1/012030</a>.</li>
-        <li>Aston Martin F1 Team (2023). AVA/Trade explains the F1 rulebook: DRS. Available at: <a href="https://www.astonmartinf1.com/en-GB/news/feature/avatrade-explains-the-f1-rulebook-drs">https://www.astonmartinf1.com/en-GB/news/feature/avatrade-explains-the-f1-rulebook-drs</a>.</li>
-        <li>Autosport (2022). What is DRS in F1, how does it work and is it automatic? Available at: <a href="https://www.autosport.com/f1/news/what-is-drs-f1-how-does-it-work/10307184/">https://www.autosport.com/f1/news/what-is-drs-f1-how-does-it-work/10307184/</a>.</li>
-        <li>Braybrook, R. (2024). Fastest and slowest turns on the F1 calendar. Autosport. Available at: <a href="https://www.autosport.com/f1/news/fastest-and-slowest-turns-on-the-f1-calendar/10571441/">https://www.autosport.com/f1/news/fastest-and-slowest-turns-on-the-f1-calendar/10571441/</a>.</li>
-        <li>Cankaya, E. (2024). Why F1 cars have wings – with a McLaren Aero Specialist. Formula1.com. Available at: <a href="https://www.formula1.com/en/latest/article/f1-explains-downforce-and-why-f1-cars-have-wings-with-mclaren-aero.10xj8CJPz8s7CmwfoyWmCU">https://www.formula1.com/en/latest/article/f1-explains-downforce-and-why-f1-cars-have-wings-with-mclaren-aero.10xj8CJPz8s7CmwfoyWmCU</a>.</li>
-        <li>FORMULA 1 (2024). Aerodynamics in Formula 1 | F1 Explained [YouTube]. Available at: <a href="https://www.youtube.com/watch?v=JuEvK-zCqio">https://www.youtube.com/watch?v=JuEvK-zCqio</a>.</li>
-        <li>Formula1.com (2019). Third DRS zone added for 2019 Singapore Grand Prix. Available at: <a href="https://www.formula1.com/en/latest/article/third-drs-zone-added-for-2019-singapore-grand-prix.4kvO24mLl17DGMeMTRsU4T">https://www.formula1.com/en/latest/article/third-drs-zone-added-for-2019-singapore-grand-prix.4kvO24mLl17DGMeMTRsU4T</a>. [Accessed 22 Oct. 2025].</li>
-        <li>Luke Morgan (2022). Perrinn F1 car rear wing DRS activation - CFD [YouTube]. Available at: <a href="https://www.youtube.com/watch?v=lSrk2pnlx2I">https://www.youtube.com/watch?v=lSrk2pnlx2I</a>.</li>
-        <li>Mitchell-Malm, S. (2024). Why F1’s dropping DRS for its 2026 cars. The Race. Available at: <a href="https://www.the-race.com/formula-1/f1-dropping-drs-2026-cars-explained">https://www.the-race.com/formula-1/f1-dropping-drs-2026-cars-explained</a>. [Accessed 23 Oct. 2025].</li>
-        <li>NASA (2010). Bernoulli’s principle. Available at: <a href="https://www.nasa.gov/wp-content/uploads/2023/06/bernoullis-principle-k-4-02-09-17-508.pdf">https://www.nasa.gov/wp-content/uploads/2023/06/bernoullis-principle-k-4-02-09-17-508.pdf</a>.</li>
-        <li>Pandit, A. & Day, G. (2021). The Aerodynamics of F1 Car Design. Journal of Student Research, 10(2). doi: <a href="https://doi.org/10.47611/jsrhs.v10i2.1475">https://doi.org/10.47611/jsrhs.v10i2.1475</a>.</li>
-        <li>Reed, D. (2022). Should DRS be removed from Formula 1? [online] OverTake.gg. Available at: <a href="https://www.overtake.gg/news/should-drs-be-removed-from-formula-1.547">https://www.overtake.gg/news/should-drs-be-removed-from-formula-1.547</a>. [Accessed 28 Oct. 2025].</li>
-        <li>Yang, X. (2025). The Impact of Drag Reduction System Technology on the Performance of Formula One Cars. Applied and Computational Engineering, 161(1), pp. 3-4. doi: <a href="https://doi.org/10.54254/2755-2721/2025.kl24089">https://doi.org/10.54254/2755-2721/2025.kl24089</a>.</li>
-        <li>Zhang, Z. (2023). Study on aerodynamic development in Formula One racing. Theoretical and Natural Science, 14(1), pp. 38–41. doi: <a href="https://doi.org/10.54254/2753-8818/14/20240875">https://doi.org/10.54254/2753-8818/14/20240875</a>.</li>
-      </ol>
-    </section>
-
-    <!-- Last commit time display -->
-    <!-- Set data-owner and data-repo to the GitHub repository you want to query. -->
-    <!-- Example: data-owner="fepsfy6932942" data-repo="my-repo" -->
-    <div id="last-updated" data-owner="fepsfy6932942" data-repo="FY6932942">
-      Loading last update time...
-    </div>
-
-    <!-- Verify Button -->
-    <button class="verify-btn" id="verifyBtn" type="button">Verify Last Modified Time</button>
-
-    <!-- Placeholder for total word count -->
-    <p id="totalWordCount"></p>
-    <div id="word-breakdown" aria-live="polite"></div>
-
-    <hr>
-
-    <script>
-      // Configuration: optional GitHub token for higher rate limits.
-      // WARNING: Never commit a real token to a public repo. Use only for local/testing.
-      const GITHUB_TOKEN = ''; // <-- paste a token here when testing locally (optional, not recommended publicly)
-
-      // Helper: fetch most recent commit for a repo
-      async function getLastUpdatedTime(owner, repo) {
-        const url = `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/commits?per_page=1`;
-        const headers = { 'Accept': 'application/vnd.github.v3+json' };
-        if (GITHUB_TOKEN) headers['Authorization'] = `token ${GITHUB_TOKEN}`;
-
-        try {
-          const response = await fetch(url, { method: 'GET', headers });
-          if (response.status === 404) {
-            return { ok: false, message: 'Repository not found (404). Please check owner/repo.' };
-          }
-          if (response.status === 403) {
-            // Possibly rate-limited
-            const remaining = response.headers.get('X-RateLimit-Remaining');
-            const reset = response.headers.get('X-RateLimit-Reset');
-            if (remaining === '0' && reset) {
-              const resetDate = new Date(parseInt(reset, 10) * 1000);
-              return { ok: false, message: `Rate limit exceeded. Resets at ${resetDate.toLocaleString()}.` };
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Effects of DRS in Formula One</title>
+     <style>
+            :root{
+                --bg: #f6f8fa;
+                --surface: #ffffff;
+                --text: #0f1724;
+                --muted: #586069;
+                --accent: #0ea5a4;
+                --max-width: 900px;
+                --gap: 20px;
+                --radius: 10px;
             }
-            const body = await response.json().catch(()=>null);
-            return { ok: false, message: `Access forbidden (403). ${body && body.message ? body.message : ''}` };
-          }
-          if (!response.ok) {
-            return { ok: false, message: `Error fetching commits: ${response.status} ${response.statusText}` };
-          }
-          const commits = await response.json();
-          if (!Array.isArray(commits) || commits.length === 0) {
-            return { ok: false, message: 'No commits found in the repository.' };
-          }
-          const commitDate = commits[0].commit && (commits[0].commit.committer?.date || commits[0].commit.author?.date);
-          if (!commitDate) {
-            return { ok: false, message: 'No commit date found.' };
-          }
-          return { ok: true, date: new Date(commitDate) };
-        } catch (err) {
-          return { ok: false, message: 'Network or other error: ' + err.message };
+            
+            *,*:before,*:after{box-sizing:inherit}
+            body { 
+                font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+                margin: 0; 
+                min-height: 100vh;
+                padding: 24px; 
+                background: var(--bg); 
+                color: var(--text); 
+                line-height: 1.6; 
+            }
+            .page { 
+                max-width: var(--max-width); 
+                margin: 0 auto; 
+                padding: 32px;
+                background: var(--surface); 
+                border-radius: var(--radius); 
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 30px rgba(12,18,26,0.06);
+            }
+            h1 { text-align: center; font-size: 1.9rem; margin-top: 6px; margin-bottom: 8px; font-weight:700; }
+            h2 { font-size: 1.15rem; margin: 1.1rem 0 0.5rem; }
+            p { margin: 1.2rem 0; color: #000000; }
+            .center { text-align: center; }
+            .toc { 
+                max-width: 700px; 
+                margin: 0 auto 24px auto; 
+                padding: 16px 20px;
+                background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%);
+                border-radius: 0px;
+                border: 2px solid #000000;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+            .toc strong {
+                display: block;
+                font-size: 1.1rem;
+                color: #000000;
+                margin-bottom: 12px;
+                font-weight: 600;
+            }
+            .toc ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .toc li {
+                margin: 8px 0;
+            }
+            .toc a {
+                color: var(--text);
+                text-decoration: none;
+                transition: all 0.2s ease;
+                padding: 4px 8px;
+                border-radius: 4px;
+                display: inline-block;
+            }
+            .toc a:hover {
+                color: #000000;
+                background: rgba(0, 0, 0, 0.05);
+            }
+            
+
+           
+            .figure{margin:16px 0}
+            .figure img{display:block;width:100%;height:auto;border-radius:8px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+            .figure figcaption{font-size:0.92rem;color:var(--muted);margin-top:8px}
+            .figure--center{max-width:600px;margin-left:auto;margin-right:auto}
+            .figure--right{float:right;width:220px;margin:0 0 12px 20px}
+            .figure--left{float:left;width:220px;margin:0 20px 12px 0}
+            .section-container::after{content:'';display:table;clear:both}
+
+           
+            @media(max-width:720px){
+                .figure--right,.figure--left{float:none;width:100%;margin:12px 0}
+                .page{padding:18px}
+            }
+
+            html{scroll-behavior:smooth}
+            
+            .banner img { width: 100%;}
+           
+                
+            
+        </style>
+    </head>
+    <body>
+    <div class="page">
+        <div class="banner">
+            <img src="banner.png" alt="Formula One DRS Banner" />
+        </div>
+        <h2>ENG0018: Computer Laboratory</h2>
+        <h2>Student URN: 6932942</h2>
+        
+        <br>
+
+        <div class="toc">
+            <strong>Table of Contents</strong>
+        <ul>
+            <li><a href="#Abstract">Abstract</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#How-Wings-Work">DRS Mechanism</a></li>
+             <li><a href="#Why-DRS">Why DRS</a></li>
+            <li><a href="#discussion">Discussion</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#references">References</a></li>
+        </ul>
+    </div>
+    
+    <br>
+    <br>
+
+<h1>Effects of DRS in Formula One</h1>
+<h2 id="Abstract">Abstract</h2>
+<p>The use of DRS has had a significant impact on the technological advancements and racing styles in Formula One. The wings used on F1 cars are essential for generating downforce, however, increases the drag on the car. DRS reduces drag and effects of turbulent air allowing for greater speeds and opportunities for overtaking. While heavily criticised for its simplicity and perceived as an ‘easy speed boost’, it produces a greater number of overtakes and far more entertainment. The FIA has planned for the removal of the DRS system and replacing it for active Aerosystems to encourage greater strategic thinking and energy management.</p>
+
+<br>
+
+<h2 id="introduction">Introduction</h2>
+<p>“Aerodynamics are for people who can’t build engines” – Enzo Ferrari </p>
+
+<p>Aerodynamics plays a vital role in f1 cars today. Without it, cars would not be able to corner at high speeds, accelerate without taking off the ground and provide competitive racing. The FIA (Fédération Internationale de l'Automobile) controls regulations in F1 and encourage the use of aerodynamics as it allows for closer racing and overtaking, Such as the Drag Reduction System which provides a more entertaining race. This paper will investigate the effects of DRS, how it works and the impact it has had on formula one viewers.</p>
+
+<br>
+
+<h2 id="How-Wings-Work">How Wings work</h2>
+<div class="section-container">
+    <figure class="figure figure--right">
+        <img src="activateddrs.png" alt="DRS Activation Diagram" />
+        <figcaption style="text-align:right;">Yang, X. (2025). The Impact of Drag Reduction System Technology on the Performance of Formula One Cars.</figcaption>
+    </figure>
+    <p>F1 cars need to generate downforce to corner at high speeds of up to 190 miles per hour. “Downforce is a vertical aerodynamic force that pushes down on the car, to generate more grip and go faster through corners,” (Emel Cankaya - Why F1 cars have wings – with a McLaren Aero Specialist). This wing is not the same shape as a normal wing on an aeroplane which is used to generate lift. instead, it is an upside-down wing and provides the opposite force of lift – downforce. This phenomenon occurs due to Bernoulli’s Principle - when velocity of a fluid is high, pressure is low. An F1 wing is in the shape of an aerofoil and can create a difference in pressure. ‘When air travels around the upper surface, the velocity of the air slows down as the air must move around the wing while on the lower surface velocity is greater, forming areas of high pressure and low pressure. Due to the difference in pressure between the upper and lower surfaces downforce is generated’ (NASA (2010). Bernoulli’s principle). However, while downforce is essential to corner at high speeds, this also produces a large amount of drag.  </p>
+
+<figure class="figure figure--center">
+    <img src="Rear Wing Pressure.png" alt="Pressure distribution on F1 rear wing" />
+    <figcaption>Zhang, Z. (2023). Study on aerodynamic development in Formula One racing</figcaption>
+</figure>
+
+<br>
+
+<h2 id="Why-DRS">Why DRS</h2>
+<p>Turbulent air is a result of the low pressure generated from the rear wing and the effects the car has on the air which causes disruption. This makes it difficult for drivers behind the leading car to overtake as the airflow is not optimal. ‘When DRS is activated by the press of a button, the rear flap on the wing opens’ (Aston Martin F1 Team). When this occurs, air can pass through the wing and reduces the overall drag on the car as well as turbulent air (dirty air). This is particularly beneficial to the cars behind as turbulent air no longer causes a loss in speed. The DRS is only used in areas on a track where a long straight is present. This is because DRS reduces the downforce and would be dangerous to use around corners and chicanes leading to loss of traction. This is a significant part of the new racing strategies in F1 as it allows for a ‘greater increase in speed by 8 – 12 km/h (5 – 7.5 mph)’ (Aston Martin F1 Team). ‘The drag is reduced by roughly 20% while a multi-element rear wing has shown a reduction in 83% when tested in free-flow conditions where no obstructions occur when driving’ (Zhang, Z. (2023). Study on aerodynamic development in Formula One racing.).</p>
+<figure class="figure figure--center" style="max-width:600px;">
+    <img src="DRS Zones.png" alt="DRS Zones in Singapore Grand Prix" />
+    <figcaption>Formula1.com. (2019). Third DRS zone added for 2019 Singapore Grand Prix</figcaption>
+</figure>
+<br>
+
+<h2 id="discussion">Discussion</h2>
+<p>The DRS has a mixed opinion by viewers as it is seen as an easy speed boost and doesn’t require skill to overtake, reducing the ‘purity’ of the sport. In addition, the leading car is seen to have a disadvantage and an unequal opportunity to keep their position with an increased risk of accidents due to attempted overtakes. However, while the overtakes may be viewed as artificial, there is no doubt more overtakes is far more exciting than none. Furthermore, when DRS is active, turbulent air is no longer a problem which allows the cars to reduce the gap between leading cars for more competitive racing. However, the DRS is undergoing change in the 2026 season, DRS being removed and replaced with Z-mode and X-mode. ‘The FIA aim to reduce the amount of downforce by 30% and reduced drag by 55% to improve efficiency and handling making the cars more raceable. The Z-mode is the standard racing system used to go through corners faster however, the front wing and rear wing will be adjustable. X-mode is a low-drag configuration which angles the flaps of the wing on both the rear and front wing to maximise straight-line speed’ (Formula 1® - The Official F1® Website. (2024). Inside the 2026 aerodynamics regulations). ‘Another new system called the Manual Override Mode (MOM) will work in tandem to Z/X mode by providing greater electrical power, potentially allowing for more ‘organic’ overtaking (Mitchell-Malm, S. (2024). Why F1’s dropping DRS for its 2026 cars). This implements greater strategic thinking and not a simple overtake with the press of a button such as DRS was viewed as.</p>
+<br>
+
+<figure class="figure figure--center" style="max-width:600px;">
+    <img src="DRS Votes.png" alt="DRS Votes results" />
+    <figcaption>Small Survey on DRS: Reed, D. (2022). Should DRS be removed from Formula 1?</figcaption>
+</figure>
+
+<br>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>DRS allows for greater speed, reduced drag and overtaking. DRS has proved essential for the competitiveness of F1 and encourages aggressive racing making it more entertaining. DRS demonstrates that F1 has undergone an evolution in its approach to racing where engines can only do so much and must incorporate aerodynamics for the development of faster cars. While the DRS is criticised for its simplicity and lack of strategic use, it generates several overtakes which is greater than none. The new Z/X mode is yet to be used however the FIA will encourage energy management, providing more organic overtakes. The drivers will be able to alter the wings angle of attacks and opening and closing making the system more complex will mean skill and strategic plays are required.</p>
+<br>
+
+<h2 id="references">References</h2>
+        <ol>
+            <li>Azmi, A., Sapit, A., Mohammed, A. N., Razali, M., Sadikin, A., & Nordin, N. (2017). Study on airflow characteristics of rear wing of F1 car. IOP Conference Series: Materials Science and Engineering, 243, 012030. doi: <a href="https://doi.org/10.1088/1757-899X/243/1/012030">https://doi.org/10.1088/1757-899X/243/1/012030</a>.</li>
+            <li>Aston Martin F1 Team (2023). AVA/Trade explains the F1 rulebook: DRS. Available at: <a href="https://www.astonmartinf1.com/en-GB/news/feature/avatrade-explains-the-f1-rulebook-drs">https://www.astonmartinf1.com/en-GB/news/feature/avatrade-explains-the-f1-rulebook-drs</a>.</li>
+            <li>Autosport (2022). What is DRS in F1, how does it work and is it automatic? Available at: <a href="https://www.autosport.com/f1/news/what-is-drs-f1-how-does-it-work/10307184/">https://www.autosport.com/f1/news/what-is-drs-f1-how-does-it-work/10307184/</a>.</li>
+            <li>Braybrook, R. (2024). Fastest and slowest turns on the F1 calendar. Autosport. Available at: <a href="https://www.autosport.com/f1/news/fastest-and-slowest-turns-on-the-f1-calendar/10571441/">https://www.autosport.com/f1/news/fastest-and-slowest-turns-on-the-f1-calendar/10571441/</a>.</li>
+            <li>Cankaya, E. (2024). Why F1 cars have wings – with a McLaren Aero Specialist. Formula1.com. Available at: <a href="https://www.formula1.com/en/latest/article/f1-explains-downforce-and-why-f1-cars-have-wings-with-mclaren-aero.10xj8CJPz8s7CmwfoyWmCU">https://www.formula1.com/en/latest/article/f1-explains-downforce-and-why-f1-cars-have-wings-with-mclaren-aero.10xj8CJPz8s7CmwfoyWmCU</a>.</li>
+            <li>FORMULA 1 (2024). Aerodynamics in Formula 1 | F1 Explained [YouTube]. Available at: <a href="https://www.youtube.com/watch?v=JuEvK-zCqio">https://www.youtube.com/watch?v=JuEvK-zCqio</a>.</li>
+            <li>Formula1.com (2019). Third DRS zone added for 2019 Singapore Grand Prix. Available at: <a href="https://www.formula1.com/en/latest/article/third-drs-zone-added-for-2019-singapore-grand-prix.4kvO24mLl17DGMeMTRsU4T">https://www.formula1.com/en/latest/article/third-drs-zone-added-for-2019-singapore-grand-prix.4kvO24mLl17DGMeMTRsU4T</a>. [Accessed 22 Oct. 2025].</li>
+            <li>Luke Morgan (2022). Perrinn F1 car rear wing DRS activation - CFD [YouTube]. Available at: <a href="https://www.youtube.com/watch?v=lSrk2pnlx2I">https://www.youtube.com/watch?v=lSrk2pnlx2I</a>.</li>
+            <li>Mitchell-Malm, S. (2024). Why F1’s dropping DRS for its 2026 cars. The Race. Available at: <a href="https://www.the-race.com/formula-1/f1-dropping-drs-2026-cars-explained">https://www.the-race.com/formula-1/f1-dropping-drs-2026-cars-explained</a>. [Accessed 23 Oct. 2025].</li>
+            <li>NASA (2010). Bernoulli’s principle. Available at: <a href="https://www.nasa.gov/wp-content/uploads/2023/06/bernoullis-principle-k-4-02-09-17-508.pdf">https://www.nasa.gov/wp-content/uploads/2023/06/bernoullis-principle-k-4-02-09-17-508.pdf</a>.</li>
+            <li>Pandit, A. & Day, G. (2021). The Aerodynamics of F1 Car Design. Journal of Student Research, 10(2). doi: <a href="https://doi.org/10.47611/jsrhs.v10i2.1475">https://doi.org/10.47611/jsrhs.v10i2.1475</a>.</li>
+             <li>Reed, D. (2022). Should DRS be removed from Formula 1? [online] OverTake.gg. Available at: <a href="https://www.overtake.gg/news/should-drs-be-removed-from-formula-1.547">https://www.overtake.gg/news/should-drs-be-removed-from-formula-1.547</a>. [Accessed 28 Oct. 2025].
+            <li>Yang, X. (2025). The Impact of Drag Reduction System Technology on the Performance of Formula One Cars. Applied and Computational Engineering, 161(1), pp. 3-4. doi: <a href="https://doi.org/10.54254/2755-2721/2025.kl24089">https://doi.org/10.54254/2755-2721/2025.kl24089</a>.</li>
+            <li>Zhang, Z. (2023). Study on aerodynamic development in Formula One racing. Theoretical and Natural Science, 14(1), pp. 38–41. doi: <a href="https://doi.org/10.54254/2753-8818/14/20240875">https://doi.org/10.54254/2753-8818/14/20240875</a>.</li>
+           
+
+‌</li>
+        </ol>
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Last commit time display -->
+<div id="last-updated">Loading last update time...</div>
+<!-- Verify Button -->
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+    Verify Last Modified Time
+</button>
+<script>
+    async function getLastUpdatedTime() {
+        const username = 'fepsfy6932942';
+        const repo = 'FY6932942';
+       
+        const url = `https://api.github.com/repos/${fepsfy6932942}/${FY6932942}/commits`;
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+            }
+            const commits = await response.json();
+            if (commits && commits.length > 0) {
+                const lastCommitDate = new Date(commits[0].commit.committer.date);
+               
+                // Displaying the time on load
+                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+            } else {
+                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+            }
+        } catch (error) {
+            console.error('Error fetching the last updated time:', error);
+            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
         }
-      }
+    }
+    // Function to verify the last update time by re-fetching it from the API
+    async function verifyLastUpdatedTime() {
+        document.getElementById('last-updated').innerText = 'Verifying...';
+        await getLastUpdatedTime();
+        alert("Last modified time has been successfully verified from GitHub API.");
+    }
+    // Initial load to display the time on page load
+    window.onload = getLastUpdatedTime;
+</script>
 
-      // Update DOM for last-updated (reads owner/repo from data attributes)
-      async function updateLastUpdatedDisplay(elementId = 'last-updated') {
-        const el = document.getElementById(elementId);
-        if (!el) return;
-        const owner = el.getAttribute('data-owner') || '';
-        const repo = el.getAttribute('data-repo') || '';
-        if (!owner || !repo) {
-          el.textContent = 'Repository owner/repo not configured. Edit the data-owner and data-repo attributes.';
-          return;
-        }
-        el.textContent = 'Checking GitHub for latest commit...';
-        const result = await getLastUpdatedTime(owner, repo);
-        if (result.ok) {
-          el.textContent = `Last Modified Time: ${result.date.toLocaleString()}`;
-        } else {
-          el.textContent = `Unable to fetch last update: ${result.message}`;
-        }
-      }
 
-      // Word count: count text inside all elements with data-countable attribute
-      function computeWordCount(text) {
-        if (!text) return 0;
-        // Normalize whitespace and remove multiple newlines; keep apostrophes inside words
-        const normalized = text.replace(/\s+/g, ' ').trim();
-        if (normalized === '') return 0;
-        // Match words (including contractions)
-        const matches = normalized.match(/[A-Za-z0-9À-ÖØ-öø-ÿ]+(?:'[A-Za-z0-9]+)?/g);
-        return matches ? matches.length : 0;
-      }
-
-      function displayTotalWordCount() {
-        const sections = Array.from(document.querySelectorAll('[data-countable]'));
-        let grandTotal = 0;
-        const breakdown = [];
-        sections.forEach(section => {
-          const id = section.id || 'unnamed';
-          const heading = section.querySelector('h1,h2,h3')?.textContent?.trim() || id;
-          const text = section.textContent || '';
-          const count = computeWordCount(text);
-          grandTotal += count;
-          breakdown.push({ id, heading, count });
-        });
-
-        const totalEl = document.getElementById('totalWordCount');
-        const breakdownEl = document.getElementById('word-breakdown');
-
-        if (totalEl) totalEl.textContent = `Total word count (counted sections): ${grandTotal}`;
-
-        if (breakdownEl) {
-          // build a small inline list
-          breakdownEl.innerHTML = '';
-          const ul = document.createElement('ul');
-          ul.style.listStyle = 'none';
-          ul.style.padding = '0';
-          ul.style.margin = '0';
-          breakdown.forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = `${item.heading}: ${item.count} words`;
-            ul.appendChild(li);
-          });
-          breakdownEl.appendChild(ul);
-        }
-      }
-
-      // Wire up DOMContentLoaded to run both features
-      document.addEventListener('DOMContentLoaded', () => {
-        updateLastUpdatedDisplay(); // reads data-owner/data-repo from #last-updated
-        displayTotalWordCount();
-      });
-
-      // Verify button triggers a refresh of the timestamp (no alert)
-      document.getElementById('verifyBtn').addEventListener('click', async () => {
-        const btn = document.getElementById('verifyBtn');
-        btn.disabled = true;
-        btn.textContent = 'Verifying...';
-        await updateLastUpdatedDisplay();
-        btn.textContent = 'Verify Last Modified Time';
-        btn.disabled = false;
-      });
-    </script>
-  </div>
-</body>
-</html>
+ <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + AnalysisCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
