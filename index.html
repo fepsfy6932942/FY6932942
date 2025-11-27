@@ -132,7 +132,7 @@
 <br>
 
 <h2 id="introduction">Introduction</h2>
-        <pre id="Introduction_InText">
+      
 <p>“Aerodynamics are for people who can’t build engines” – Enzo Ferrari </p>
 
 <p>Aerodynamics plays a vital role in f1 cars today. Without it, cars would not be able to corner at high speeds, accelerate without taking off the ground and provide competitive racing. The FIA (Fédération Internationale de l'Automobile) controls regulations in F1 and encourage the use of aerodynamics as it allows for closer racing and overtaking, Such as the Drag Reduction System which provides a more entertaining race. This paper will investigate the effects of DRS, how it works and the impact it has had on formula one viewers.</p>
@@ -174,7 +174,7 @@
 <br>
 
 <h2 id="conclusion">Conclusion</h2>
-     <pre id="Conclusion_InText">
+     
 <p>DRS allows for greater speed, reduced drag and overtaking. DRS has proved essential for the competitiveness of F1 and encourages aggressive racing making it more entertaining. DRS demonstrates that F1 has undergone an evolution in its approach to racing where engines can only do so much and must incorporate aerodynamics for the development of faster cars. While the DRS is criticised for its simplicity and lack of strategic use, it generates several overtakes which is greater than none. The new Z/X mode is yet to be used however the FIA will encourage energy management, providing more organic overtakes. The drivers will be able to alter the wings angle of attacks and opening and closing making the system more complex will mean skill and strategic plays are required.</p>
 <br>
 
@@ -212,7 +212,7 @@
         const username = 'fepsfy6932942';
         const repo = 'FY6932942';
        
-        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+        const url = `https://api.github.com/repos/${fepsfy6932942}/${FY6932942}/commits`;
         try {
             const response = await fetch(url, {
                 method: 'GET',
@@ -269,8 +269,8 @@
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const ConclusionCount = displayWordCount("Conclusion_InText");
+    const IntroductionCount = displayWordCount("Introduction");
+    const ConclusionCount = displayWordCount("Conclusion");
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + ConclusionCount;
     // Display the total word count
