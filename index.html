@@ -196,3 +196,115 @@
 
 ‌</li>
         </ol>
+        <!-- ////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////// Last Update ///////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////// -->
+
+<div id="last-updated">Loading last update time...</div>
+
+<button onclick="verifyLastUpdatedTime()" 
+        style="display: block; margin: 10px auto; padding: 8px 16px;">
+    Verify Last Modified Time
+</button>
+
+<script>
+    async function getLastUpdatedTime() {
+        const username = 'fepsfy6932942';
+        const repo = 'FY6932942';
+
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+            }
+
+            const commits = await response.json();
+
+            if (commits && commits.length > 0) {
+                const lastCommitDate = new Date(commits[0].commit.committer.date);
+                document.getElementById('last-updated').innerText =
+                    `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+            } else {
+                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+            }
+
+        } catch (error) {
+            console.error('Error fetching the last updated time:', error);
+            document.getElementById('last-updated').innerText =
+                'Error fetching update time. Please check the repository details.';
+        }
+    }
+
+    async function verifyLastUpdatedTime() {
+        document.getElementById('last-updated').innerText = 'Verifying...';
+        await getLastUpdatedTime();
+        alert("Last modified time has been successfully verified from GitHub API.");
+    }
+</script>
+
+
+<!-- ////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////// Word Count ////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////// -->
+
+<p id="totalWordCount"></p>
+<hr>
+
+<script>
+    function countWords(text) {
+        text = text.trim();
+        if (text.length === 0) return 0;
+        return text.split(/\s+/).length;
+    }
+
+    function displayTotalWordCount() {
+        // sections to EXCLUDE
+        const excludeIDs = ["Abstract", "References"];
+
+        let totalWords = 0;
+
+        // all text on page
+        const allText = document.body.innerText;
+
+        // words to subtract
+        let excludedWords = 0;
+
+        excludeIDs.forEach(id => {
+            const section = document.getElementById(id);
+            if (section) {
+                excludedWords += countWords(section.innerText);
+            }
+        });
+
+        // full word count
+        const fullWords = countWords(allText);
+
+        // final word count
+        totalWords = fullWords - excludedWords;
+
+        document.getElementById("totalWordCount").innerText =
+            `Total word count (excluding Abstract & References): ${totalWords}`;
+    }
+
+</script>
+
+<!-- ////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////// Page Load Events //////////////////// -->
+<!-- ////////////////////////////////////////////////////////////// -->
+
+<script>
+    // Both scripts now run on page load
+    window.addEventListener("load", getLastUpdatedTime);
+    window.addEventListener("load", displayTotalWordCount);
+</script>
+
+   
+
